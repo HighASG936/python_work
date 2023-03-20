@@ -1,7 +1,9 @@
 #Name: Aurelio Siordia
 #Date: 15/03/23
 
-guest=['ramiro', 'sofía', 'carmelo', 'sara']
+guest=['other','ramiro', 'sofía', 'carmelo', 'sara']
+
+guest.remove('other') #Remove element by value
 
 #3-4 Guest List
 print(f"Hello {guest[0].title()}! You're invited to my dinner tomorrow. See you later!")
