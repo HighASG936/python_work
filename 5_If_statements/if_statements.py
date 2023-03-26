@@ -26,7 +26,7 @@ else:
 print()
 
 #5-5 Alien Colors #3
-alien_color='green'
+alien_color = 'green'
 if alien_color == 'green':
 	print('You just earned 5 points')
 elif alien_color == 'yellow':	
@@ -34,7 +34,7 @@ elif alien_color == 'yellow':
 elif alien_color == 'red':
 	print('You just earned 15 points')
 
-alien_color='yellow'
+alien_color = 'yellow'
 if alien_color == 'green':
 	print('You just earned 5 points')
 elif alien_color == 'yellow':	
@@ -42,7 +42,7 @@ elif alien_color == 'yellow':
 elif alien_color == 'red':
 	print('You just earned 15 points')
 
-alien_color='red'
+alien_color = 'red'
 if alien_color == 'green':
 	print('You just earned 5 points')
 elif alien_color == 'yellow':	
@@ -68,7 +68,7 @@ elif age  >= 65:
 print()
 
 #5-7 Favorite Fruit
-favorite_fruits=['strawberry', 'watermelon', 'pineapple']
+favorite_fruits = ['strawberry', 'watermelon', 'pineapple']
 
 if 'strawberry' in favorite_fruits:
 	print('You really like strawberries')

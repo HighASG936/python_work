@@ -2,7 +2,7 @@
 #Date:26/03/23
 
 #5-8 Hello Admin
-usernames=['Gerald', 'Carmen', 'Joseph', 'Clara', 'Stephen','admin','Anna']
+usernames = ['Gerald', 'Carmen', 'Joseph', 'Clara', 'Stephen','admin','Anna']
 for username in usernames:
 	if username == 'admin':
 		print('Hello admni, would you like to see a status report?')
@@ -11,7 +11,7 @@ for username in usernames:
 print()
 
 #5-9 No Users
-usernames=[]
+usernames = []
 if usernames:
 	for username in usernames:
 		if username == 'admin':
@@ -23,9 +23,9 @@ else:
 print()
 
 #5-10 Checking Username
-current_users=['Gerald', 'Carmen', 'Joseph', 'Clara', 'Stephen','admin','Anna']
-new_users=['Carl','carmen','anNa', 'Alfred', 'John']
-current_lowercase_users=[]
+current_users = ['Gerald', 'Carmen', 'Joseph', 'Clara', 'Stephen','admin','Anna']
+new_users = ['Carl','carmen','anNa', 'Alfred', 'John']
+current_lowercase_users = []
 
 for current_user  in current_users:
 	current_lowercase_users.append(current_user.lower())
@@ -39,7 +39,7 @@ for new_user in new_users:
 
 #5-10 Ordinals numbers
 
-numbers=[n for n in range(1,10)]
+numbers = [n for n in range(1,10)]
 for number in numbers:
 	if number == 1:
 		number_end = 'st'
