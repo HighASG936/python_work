@@ -1,0 +1,6 @@
+your ideas
+
+Make a program that will capable to visualize a TRI fixture by a GUI and get info about each node
+Make a console game like Mario Bros. or LOZ.
+Make a website to monitoring and free-hands Turn On/Off my current PC 
+
