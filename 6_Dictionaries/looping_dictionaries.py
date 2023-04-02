@@ -3,7 +3,6 @@
 
 
 #6-4 Glossary 2
-
 glossary={'tuple':'Just like struct at c/c++ but in python',
           'dictionary':'Just like hashes at perl but in python',
           'test statement':'a command that approches to eval expresion',
