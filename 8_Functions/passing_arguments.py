@@ -3,6 +3,7 @@
 
 # 8-3 T-Shirt
 def make_shirt(size, text='I love Python'):
+    """Display size and text of your t-shirt"""
     summary = 'Summary of your shirt:\n'
     summary += f'\tSize: {size.upper()}\n'
     summary += f'\tText: {text}\n'
@@ -17,6 +18,7 @@ make_shirt(size='s', text = 'WTF?')
 
 #8-5 Cities
 def describe_city(name, country='mexico'):
+    """Display name of a country and its country"""
     print(f'{name.title()} is in {country.title()}\n')
     
 describe_city('guadalajara')
