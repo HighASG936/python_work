@@ -17,10 +17,10 @@ class Restaurant:
         print(f'Location: {location}')
         
 
-
     def open_restaurant(self):
         """Display the restaurant is open"""
         print(f'The restaurant "{self.restaurant_name}" is open')
+
 
 res1 = Restaurant('Italianni Moe', 'italian food')
 print(f'Name: {res1.restaurant_name}')
