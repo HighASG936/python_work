@@ -1,0 +1,6 @@
+In Python you can model real life object
+In Python you can create a file
+In Python you can read whether file you want
+In Python you can develop videogames
+In Python you can create your own web application
+
