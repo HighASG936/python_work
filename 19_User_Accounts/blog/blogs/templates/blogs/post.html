@@ -1,0 +1,28 @@
+{% extends "blogs/base.html" %}
+
+{% block content %}
+
+<ul>
+  <h2 align="center">{{ post }}</h2>
+  
+    <h3>
+      <a href="{% url 'blogs:new_entry' post.id %}"  >Enter new post</a>
+    </h3>
+
+  {% for entry in entries %}
+    <li>
+    	<p>{{ entry.text|linebreaks }}</p>
+    	<p>
+			<a href="{% url 'blogs:edit_post' entry.id %}"  >Edit post</a>
+		</p>
+    </li>
+
+  {% empty %}
+    <h3 align="center">No hay entradas para este blog</h3>
+  {% endfor %}
+</ul>
+
+
+
+{% endblock content %}
+
