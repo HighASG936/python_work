@@ -24,6 +24,9 @@ class Ship:
         #Movement flags
         self.moving_up = False
         self.moving_down = False
+        
+        self.increase = 1.1
+        self.asserts = 0
     
     def update(self):
         """Update the ship's position based on the movement flag."""

@@ -10,11 +10,11 @@ class Settings:
         self.bg_color = (10, 73, 123)
         
         #Ship settings
-        self.ship_speed = 1
+        self.ship_speed = 3
         self.ship_limit = 3
         
         #Bullet settings
-        self.bullet_speed = 1                    
+        self.bullet_speed = 3                    
         self.bullet_width = 15
         self.bullet_height = 3
         self.bullet_color = (255, 255, 60)
@@ -28,4 +28,15 @@ class Settings:
         self.target_height = 60
         self.target_speed = 0.2
         self.target_direction = 1
+        
+        self.asserts = 0
+        self.increase = 4
+        
+    def initialize_settings(self):
+        """ """
+        self.target_speed = 0.2
+        self.bullets_left = 10
+        self.asserts = 0
+        self.increase = 4        
+        
         

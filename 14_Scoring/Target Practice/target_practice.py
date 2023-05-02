@@ -51,6 +51,7 @@ class TargetPractice:
     def _check_play_button(self, mouse_pos):
         """Start new game when the player clicks Play."""
         if self.play_button.rect.collidepoint(mouse_pos):
+            self.settings.initialize_settings()
             self.stats.game_active = True         
 
     def _check_keydown_events(self, event):
@@ -130,6 +131,15 @@ class TargetPractice:
         else:
             self.stats.game_active = False
 
+    def _check_asserts(self):
+        """ """
+        self.settings.asserts += 1
+        if self.settings.asserts >= 1:
+            self.settings.asserts = 0
+            self.bullets_left = 10
+            self.settings.target_speed *= self.settings.increase
+
+
     def _update_target(self):
         """ """
         self._check_target_edges()
@@ -140,11 +150,12 @@ class TargetPractice:
             if not pygame.sprite.spritecollideany(self.target,self.bullets):
                 if len(self.bullets) == 0:
                     self.settings.bullets_left -= 1
-                    #print(self.settings.bullets_left)
+                    print(self.settings.bullets_left)
                     self.get_shoot = False
-            else:
-                #print("Asserted")
+            else:                
                 self.get_shoot = False
+                self._check_asserts()
+                
                 
         if self.settings.bullets_left <= 0:
             self.stats.game_active = False
