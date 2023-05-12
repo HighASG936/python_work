@@ -5,18 +5,23 @@
 
   <p>Entries: </p>
   
-  <p>
-    <a href="{% url 'blogs:new_entry' post.id %}">Add new entry</a> 
-  </p>
-  
+  {% if post.owner == request.user %}
+    <p>
+      <a href="{% url 'blogs:new_entry' post.id %}">Add new entry</a> 
+    </p>
+  {% endif %}  
+
   <ul>
   {% for entry in entries %}
   <li>
     <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
     <p>{{ entry.text|linebreaks }}</p>
-    <p>
-      <a href="{% url 'blogs:edit_entry' entry.id  %}" >Edit Entry</a>
-    </p>
+    
+    {% if post.owner == request.user %}
+      <p>
+        <a href="{% url 'blogs:edit_entry' entry.id  %}" >Edit Entry</a>
+      </p>
+    {% endif %}
   </li>
   {% empty %}
     <li>There is no entries to show.</li>
