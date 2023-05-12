@@ -1,17 +1,6 @@
-<h1 align="center" >El blog del Yeyo</h1>
-
-
-<p align="center">
-  <a href="{% url 'blogs:index' %}">Main page</a>  
+<p>
+  <a href="{% url 'blogs:index' %}">Main page</a> -
+  <a href="{% url 'blogs:posts' %}">See my blogs</a> -
 </p>
-
-<p align="center">
-	<a href="{% url 'blogs:posts' %}" >See my posts</a>
-</p>
-
 
 {% block content %}{% endblock content %}
-
-
-<footer>Todos los derechos reservados 2023</footer>
-

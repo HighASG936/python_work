@@ -1,10 +1,16 @@
 from django import forms
-from .models import BlogPost
+
+from .models import BlogPost, BlogEntry
 
 class BlogForm(forms.ModelForm):
-	"""Form to enter new post"""
-	class Meta:
-		model = BlogPost
-		fields = ['text']
-		labels = {'text': ''}
-		widgets = {'text': forms.Textarea(attrs={'cols' :80})}
+    class Meta:
+        model = BlogPost
+        fields = ['text']
+        labels = {'text': ''}
+
+class EntryForm(forms.ModelForm):
+    class Meta:
+        model = BlogEntry
+        fields = ['text']
+        labels = {'text': ''}
+        widgets = {'text': forms.Textarea(attrs={'cols': 80})}

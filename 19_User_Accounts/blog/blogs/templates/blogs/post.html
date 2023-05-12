@@ -1,28 +1,26 @@
-{% extends "blogs/base.html" %}
+{% extends 'blogs/base.html' %}
 
 {% block content %}
+ <p>Post: {{ post }}</p>
 
-<ul>
-  <h2 align="center">{{ post }}</h2>
+  <p>Entries: </p>
   
-    <h3>
-      <a href="{% url 'blogs:new_entry' post.id %}"  >Enter new post</a>
-    </h3>
-
+  <p>
+    <a href="{% url 'blogs:new_entry' post.id %}">Add new entry</a> 
+  </p>
+  
+  <ul>
   {% for entry in entries %}
-    <li>
-    	<p>{{ entry.text|linebreaks }}</p>
-    	<p>
-			<a href="{% url 'blogs:edit_post' entry.id %}"  >Edit post</a>
-		</p>
-    </li>
-
+  <li>
+    <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+    <p>{{ entry.text|linebreaks }}</p>
+    <p>
+      <a href="{% url 'blogs:edit_entry' entry.id  %}" >Edit Entry</a>
+    </p>
+  </li>
   {% empty %}
-    <h3 align="center">No hay entradas para este blog</h3>
+    <li>There is no entries to show.</li>
   {% endfor %}
-</ul>
-
-
+  </ul>
 
 {% endblock content %}
-
